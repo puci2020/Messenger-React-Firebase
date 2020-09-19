@@ -1,33 +1,57 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import styled from 'styled-components'
 import Layout from "./Theme/Layout";
+import {Button, Input, FormControl, InputLabel} from '@material-ui/core'
+import Message from "./Message";
 
+const Wrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 50px;
+  width: 500px;
+  margin: auto;
+  
+  h1, h2{
+  text-align: center;
+  margin-bottom: 20px;
+  }
+  
 
-const P  = styled.p`
-  font-size: ${({theme}) => theme.font.size.m};
-`
+`;
 
 function App() {
     const [input, setInput] = useState('');
-    const [messages, setMessages] = useState([]);
+    const [user, setUser] = useState('');
+    const [messages, setMessages] = useState([{name: '', text: ''}]);
+    // console.log(messages);
 
+    useEffect(() => {
+        setUser(prompt("Please enter your name"));
+
+    }, []);
 
     const sendMessage = (event) => {
-        setMessages([...messages, input]);
+        event.preventDefault();
+        setMessages([...messages, {name: user, text: input}]);
         setInput('');
     };
 
     return (
         <Layout>
-            <div className="App">
+            <Wrapper>
                 <h1>Messenger create by React and Firebase</h1>
-                <input value={input} onChange={event => setInput(event.target.value)}/>
-                <button onClick={sendMessage}>Send</button>
-            </div>
+                <h2>Welcome {user}</h2>
+                <FormControl>
+                    <InputLabel>Enter a message</InputLabel>
+                    <Input value={input} onChange={event => setInput(event.target.value)}/>
+                    <Button disabled={!input} variant="contained" color="primary" type="submit" onClick={sendMessage}>Send</Button>
+                </FormControl>
 
-            {messages.map(message => (
-                <P>{message}</P>
-            ))}
+                {messages.map(message => (
+                    <Message name={user} text={message}/>
+                ))}
+            </Wrapper>
         </Layout>
     );
 }

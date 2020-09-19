@@ -5,8 +5,9 @@ export const theme = {
     },
     font: {
         size:{
-            s: '.9rem',
-            m: '1rem'
+            s: '1rem',
+            m: '1.4rem',
+            l: '1.6rem'
         }
     }
 };
