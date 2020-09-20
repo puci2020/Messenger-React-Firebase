@@ -5,8 +5,8 @@ const MessageWrapper = styled.div`
   font-size: ${({theme}) => theme.font.size.l};
   width: 100%;
   
-  .box{
-      margin: 10px;
+  .message__box{
+      margin: 0 10px 10px 10px;
       padding: 10px;
       width: fit-content;
       height: fit-content;
@@ -17,25 +17,37 @@ const MessageWrapper = styled.div`
       background-color: ${({theme}) => theme.colors.secondary};
       color: ${({theme}) => theme.colors.white};
    }
-  & .message{ 
+  & .message__text{ 
     background-color: ${({theme}) => theme.colors.primary};
     color: white;
     float: right;
+    text-align: right;
   }
-
+  
+  .message__span{
+  padding: 0 25px;
+  width: 100%;
+  font-size: ${({theme}) => theme.font.size.s};
+  color: ${({theme}) => theme.colors.gray};
+  }
+  & .message__user{
+  display: none;
+  }
 `;
+
+
 
 const Message = ({name, text}) => {
 
     const isUser = name === text.name;
 
-    // const isUser = true;
-
     return (
 
         <MessageWrapper>
-            <div className={isUser ? 'box message' : 'box'}>
-                {text.name}: {text.text}
+            <div className={isUser ? 'message__user' : 'message__span'}>{text.name}</div>
+            <div className={isUser ? 'message__box message__text' : 'message__box'}>
+
+                {text.text}
             </div>
         </MessageWrapper>
 
