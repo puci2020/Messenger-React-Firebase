@@ -23,7 +23,7 @@ const Wrapper = styled.div`
 function App() {
     const [input, setInput] = useState('');
     const [user, setUser] = useState('');
-    const [messages, setMessages] = useState([{name: '', text: ''}]);
+    const [messages, setMessages] = useState([{name: 'czoko', text: 'siema'}]);
     // console.log(messages);
 
     useEffect(() => {
