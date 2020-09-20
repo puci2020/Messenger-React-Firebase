@@ -2,33 +2,27 @@ import React from 'react';
 import styled from 'styled-components'
 
 const MessageWrapper = styled.div`
-  margin: 10px;
- 
- 
   font-size: ${({theme}) => theme.font.size.l};
   width: 100%;
   
-  .message{
-  padding: 10px;
-  height: 100%;
-  background-color: blue;
-  float: right;
-   width: fit-content;
-    border: 1px solid lightgrey;
-  border-radius: 5px;
-  box-shadow: 0 .1em .5em lightgrey ;
+  .box{
+      margin: 10px;
+      padding: 10px;
+      width: fit-content;
+      height: fit-content;
+      max-width: 90%;
+      border: 1px solid lightgrey;
+      border-radius: 20px;
+      box-shadow: 0 .1em .5em lightgrey ;
+      background-color: ${({theme}) => theme.colors.secondary};
+      color: ${({theme}) => theme.colors.white};
+   }
+  & .message{ 
+    background-color: ${({theme}) => theme.colors.primary};
+    color: white;
+    float: right;
   }
-  
-  .other{
-    padding: 10px;
-  height: 100%;
-  background-color:white;
-   border: 1px solid lightgrey;
-  border-radius: 5px;
-  box-shadow: 0 .1em .5em lightgrey ;
 
-   width: fit-content;
-  }
 `;
 
 const Message = ({name, text}) => {
@@ -39,11 +33,11 @@ const Message = ({name, text}) => {
 
     return (
 
-            <MessageWrapper>
-                <div className={isUser ? 'message' : 'other'}>
+        <MessageWrapper>
+            <div className={isUser ? 'box message' : 'box'}>
                 {text.name}: {text.text}
-                </div>
-            </MessageWrapper>
+            </div>
+        </MessageWrapper>
 
     );
 };
