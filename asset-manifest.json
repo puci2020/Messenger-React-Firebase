@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/Messenger-React-Firebase/static/css/main.c1b8bb07.chunk.css",
-    "main.js": "/Messenger-React-Firebase/static/js/main.90c8494b.chunk.js",
-    "main.js.map": "/Messenger-React-Firebase/static/js/main.90c8494b.chunk.js.map",
+    "main.js": "/Messenger-React-Firebase/static/js/main.e4135e64.chunk.js",
+    "main.js.map": "/Messenger-React-Firebase/static/js/main.e4135e64.chunk.js.map",
     "runtime-main.js": "/Messenger-React-Firebase/static/js/runtime-main.b6aa342e.js",
     "runtime-main.js.map": "/Messenger-React-Firebase/static/js/runtime-main.b6aa342e.js.map",
-    "static/js/2.90901de6.chunk.js": "/Messenger-React-Firebase/static/js/2.90901de6.chunk.js",
-    "static/js/2.90901de6.chunk.js.map": "/Messenger-React-Firebase/static/js/2.90901de6.chunk.js.map",
+    "static/js/2.8f98b161.chunk.js": "/Messenger-React-Firebase/static/js/2.8f98b161.chunk.js",
+    "static/js/2.8f98b161.chunk.js.map": "/Messenger-React-Firebase/static/js/2.8f98b161.chunk.js.map",
     "index.html": "/Messenger-React-Firebase/index.html",
-    "precache-manifest.5f0d5fc2d31901950c13f2582a3c51f0.js": "/Messenger-React-Firebase/precache-manifest.5f0d5fc2d31901950c13f2582a3c51f0.js",
+    "precache-manifest.bf30dea04973f2e19f666c8eccc76a9f.js": "/Messenger-React-Firebase/precache-manifest.bf30dea04973f2e19f666c8eccc76a9f.js",
     "service-worker.js": "/Messenger-React-Firebase/service-worker.js",
     "static/css/main.c1b8bb07.chunk.css.map": "/Messenger-React-Firebase/static/css/main.c1b8bb07.chunk.css.map",
-    "static/js/2.90901de6.chunk.js.LICENSE.txt": "/Messenger-React-Firebase/static/js/2.90901de6.chunk.js.LICENSE.txt"
+    "static/js/2.8f98b161.chunk.js.LICENSE.txt": "/Messenger-React-Firebase/static/js/2.8f98b161.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.b6aa342e.js",
-    "static/js/2.90901de6.chunk.js",
+    "static/js/2.8f98b161.chunk.js",
     "static/css/main.c1b8bb07.chunk.css",
-    "static/js/main.90c8494b.chunk.js"
+    "static/js/main.e4135e64.chunk.js"
   ]
 }
