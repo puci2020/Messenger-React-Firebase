@@ -74,7 +74,7 @@ function App() {
     }, []);
 
     useEffect(() => {
-        // setUser(prompt("Please enter your name"));
+        setUser(prompt("Please enter your name"));
 
     }, []);
 
