@@ -58,10 +58,12 @@ flex-direction: row;
 justify-content: space-between;
 align-items: center;
 
+
  }
  
  .form__input{
  flex: 1;
+ font-size: ${({theme}) => theme.font.size.m};
  }
  
  .form__button{
