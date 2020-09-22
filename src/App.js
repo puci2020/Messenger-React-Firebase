@@ -19,8 +19,9 @@ const Wrapper = styled.div`
 `;
 
 const Header = styled.div`
-  position: fixed;
-  top: 0;
+  //position: fixed;
+  //top: 0;
+  position: relative;
   width: 100%;
   height: 100px;
   display: flex;
@@ -38,9 +39,10 @@ const Header = styled.div`
 const FormWrapper = styled.div`
   width: 100%;
   height: 80px;
-  position: fixed;
+  position: relative;
   background-color: white;
-  bottom: 0;
+  //bottom: 0;
+  //top:100px;
  display: flex;
  align-items: center;
  justify-content: center;
@@ -59,11 +61,12 @@ display: flex;
 justify-content: center;
 align-items: center;
 flex-direction: column;
+position:relative;
 `
 
 function App() {
     const [input, setInput] = useState('');
-    const [user, setUser] = useState('Adam');
+    const [user, setUser] = useState('');
     const [messages, setMessages] = useState([]);
     // console.log(messages);
 
@@ -97,18 +100,19 @@ function App() {
                 <h1>Messenger create by React and Firebase</h1>
                 <h2>Welcome {user}</h2>
                 </Header>
+                <FormWrapper>
+                    <FormControl className="form">
+                        <InputLabel>Enter a message</InputLabel>
+                        <Input value={input} onChange={event => setInput(event.target.value)}/>
+                        <Button disabled={!input} variant="contained" color="primary" type="submit" onClick={sendMessage}>Send</Button>
+                    </FormControl>
+                </FormWrapper>
 <MessegesWrapper>
                 {messages.map(message => (
                     <Message name={user} text={message}/>
                 ))}
 </MessegesWrapper>
-                <FormWrapper>
-                <FormControl className="form">
-                    <InputLabel>Enter a message</InputLabel>
-                    <Input value={input} onChange={event => setInput(event.target.value)}/>
-                    <Button disabled={!input} variant="contained" color="primary" type="submit" onClick={sendMessage}>Send</Button>
-                </FormControl>
-                </FormWrapper>
+
             </Wrapper>
         </Layout>
     );
