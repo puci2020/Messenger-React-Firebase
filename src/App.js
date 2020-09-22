@@ -10,18 +10,25 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: column;
-  padding: 50px;
-  width: 500px;
+  width: 100vw;
+  height: auto;
+  min-height: 100vh;
   margin: auto;
   
  
 `;
 
 const Header = styled.div`
-position: fixed;
-top: 0;
-padding: 50px 50px 25px 50px;
-background-color: white;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+//padding: 50px 50px 25px 50px;
+  background-color: white;
  h1, h2{
   text-align: center;
   margin-bottom: 20px;
@@ -29,25 +36,34 @@ background-color: white;
 `
 
 const FormWrapper = styled.div`
-  width: 400px;
+  width: 100%;
+  height: 80px;
   position: fixed;
+  background-color: white;
   bottom: 0;
  display: flex;
+ align-items: center;
+ justify-content: center;
  
  .form{
- width: 100%;
+ width: 500px;
  }
  
 `
 
 const MessegesWrapper = styled.div`
-width: 100%;
+width: 500px;
 height: auto;
+margin: auto;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
 `
 
 function App() {
     const [input, setInput] = useState('');
-    const [user, setUser] = useState('');
+    const [user, setUser] = useState('Adam');
     const [messages, setMessages] = useState([]);
     // console.log(messages);
 
@@ -58,7 +74,7 @@ function App() {
     }, []);
 
     useEffect(() => {
-        setUser(prompt("Please enter your name"));
+        // setUser(prompt("Please enter your name"));
 
     }, []);
 

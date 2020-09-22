@@ -4,6 +4,7 @@ import styled from 'styled-components'
 const MessageWrapper = styled.div`
   font-size: ${({theme}) => theme.font.size.l};
   width: 100%;
+  overflow-y: hidden;
   
   .message__box{
       margin: 0 10px 10px 10px;
