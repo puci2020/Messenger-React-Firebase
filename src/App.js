@@ -1,7 +1,9 @@
 import React, {useEffect, useState} from 'react';
 import styled from 'styled-components'
 import Layout from "./Theme/Layout";
-import {Button, Input, FormControl, InputLabel} from '@material-ui/core'
+import {Input, FormControl} from '@material-ui/core'
+import SendIcon from '@material-ui/icons/Send';
+import {IconButton} from "@material-ui/core";
 import Message from "./Message";
 import db from './firebase'
 import firebase from "firebase";
@@ -20,26 +22,25 @@ const Wrapper = styled.div`
 `;
 
 const Header = styled.div`
-  //position: fixed;
-  //top: 0;
   position: relative;
   width: 100%;
-  height: 100px;
+  height: 150px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-//padding: 50px 50px 25px 50px;
   background-color: white;
  h1, h2{
   text-align: center;
   margin-bottom: 20px;
+  overflow: hidden;
+  padding: 15px;
   }
-`
+`;
 
 const FormWrapper = styled.div`
   width: 100%;
-  height: 80px;
+  height: 100px;
   position: fixed;
   background-color: white;
   bottom: 0;
@@ -51,13 +52,27 @@ const FormWrapper = styled.div`
  
  .form{
  width: 500px;
+padding: 20px;
 display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+
  }
  
-`
+ .form__input{
+ flex: 1;
+ }
+ 
+ .form__button{
+ flex:0;
+ }
+ 
+`;
 
 const MessegesWrapper = styled.div`
 width: 500px;
+max-width: 100vw;
 height: auto;
 margin: auto;
 display: flex;
@@ -70,7 +85,7 @@ position:relative;
 
 function App() {
     const [input, setInput] = useState('');
-    const [user, setUser] = useState('Adam');
+    const [user, setUser] = useState('');
     const [messages, setMessages] = useState([]);
     // console.log(messages);
 
@@ -81,7 +96,7 @@ function App() {
     }, []);
 
     useEffect(() => {
-        // setUser(prompt("Please enter your name"));
+        setUser(prompt("Please enter your name"));
 
     }, [])
     const sendMessage = (event) => {
@@ -106,10 +121,12 @@ function App() {
                 </Header>
                 <FormWrapper>
                     <FormControl className="form">
-                        <InputLabel>Enter a message</InputLabel>
-                        <Input value={input} onChange={event => setInput(event.target.value)}/>
-                        <Button disabled={!input} variant="contained" color="primary" type="submit"
-                                onClick={sendMessage}>Send</Button>
+                        <Input className="form__input" placeholder="Enter a message" type='text' value={input} onChange={event => setInput(event.target.value)}/>
+
+                        <IconButton className="form_button" disabled={!input} variant="contained" color="primary" type="submit"
+                                    onClick={sendMessage}>
+<SendIcon/>
+                        </IconButton>
                     </FormControl>
                 </FormWrapper>
 
