@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {forwardRef} from 'react';
 import styled from 'styled-components'
 
 const MessageWrapper = styled.div`
@@ -38,13 +38,13 @@ const MessageWrapper = styled.div`
 
 
 
-const Message = ({name, text}) => {
+const Message = forwardRef(({name, text}, ref) => {
 
     const isUser = name === text.name;
 
     return (
 
-        <MessageWrapper>
+        <MessageWrapper ref={ref}>
             <div className={isUser ? 'message__user' : 'message__span'}>{text.name}</div>
             <div className={isUser ? 'message__box message__text' : 'message__box'}>
 
@@ -53,6 +53,6 @@ const Message = ({name, text}) => {
         </MessageWrapper>
 
     );
-};
+});
 
 export default Message;
