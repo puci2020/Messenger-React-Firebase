@@ -2,7 +2,7 @@
   "name": "messenger-react-firebase",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://puci2020.github.io/puci2020/Messenger-React-Firebase/",
+  "homepage": "https://puci2020.github.io/Messenger-React-Firebase/",
   "dependencies": {
     "@material-ui/core": "^4.11.0",
     "@testing-library/jest-dom": "^4.2.4",
