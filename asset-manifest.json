@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/puci2020/Messenger-React-Firebase/static/css/main.c1b8bb07.chunk.css",
-    "main.js": "/puci2020/Messenger-React-Firebase/static/js/main.439cb21d.chunk.js",
-    "main.js.map": "/puci2020/Messenger-React-Firebase/static/js/main.439cb21d.chunk.js.map",
-    "runtime-main.js": "/puci2020/Messenger-React-Firebase/static/js/runtime-main.106bc597.js",
-    "runtime-main.js.map": "/puci2020/Messenger-React-Firebase/static/js/runtime-main.106bc597.js.map",
-    "static/js/2.0fbd3ae6.chunk.js": "/puci2020/Messenger-React-Firebase/static/js/2.0fbd3ae6.chunk.js",
-    "static/js/2.0fbd3ae6.chunk.js.map": "/puci2020/Messenger-React-Firebase/static/js/2.0fbd3ae6.chunk.js.map",
-    "index.html": "/puci2020/Messenger-React-Firebase/index.html",
-    "precache-manifest.97bed51df09a26d581fdeebf346091c9.js": "/puci2020/Messenger-React-Firebase/precache-manifest.97bed51df09a26d581fdeebf346091c9.js",
-    "service-worker.js": "/puci2020/Messenger-React-Firebase/service-worker.js",
-    "static/css/main.c1b8bb07.chunk.css.map": "/puci2020/Messenger-React-Firebase/static/css/main.c1b8bb07.chunk.css.map",
-    "static/js/2.0fbd3ae6.chunk.js.LICENSE.txt": "/puci2020/Messenger-React-Firebase/static/js/2.0fbd3ae6.chunk.js.LICENSE.txt"
+    "main.css": "/Messenger-React-Firebase/static/css/main.c1b8bb07.chunk.css",
+    "main.js": "/Messenger-React-Firebase/static/js/main.5fa14784.chunk.js",
+    "main.js.map": "/Messenger-React-Firebase/static/js/main.5fa14784.chunk.js.map",
+    "runtime-main.js": "/Messenger-React-Firebase/static/js/runtime-main.b6aa342e.js",
+    "runtime-main.js.map": "/Messenger-React-Firebase/static/js/runtime-main.b6aa342e.js.map",
+    "static/js/2.90901de6.chunk.js": "/Messenger-React-Firebase/static/js/2.90901de6.chunk.js",
+    "static/js/2.90901de6.chunk.js.map": "/Messenger-React-Firebase/static/js/2.90901de6.chunk.js.map",
+    "index.html": "/Messenger-React-Firebase/index.html",
+    "precache-manifest.28b963457188d780ce23fb0c72a01481.js": "/Messenger-React-Firebase/precache-manifest.28b963457188d780ce23fb0c72a01481.js",
+    "service-worker.js": "/Messenger-React-Firebase/service-worker.js",
+    "static/css/main.c1b8bb07.chunk.css.map": "/Messenger-React-Firebase/static/css/main.c1b8bb07.chunk.css.map",
+    "static/js/2.90901de6.chunk.js.LICENSE.txt": "/Messenger-React-Firebase/static/js/2.90901de6.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.106bc597.js",
-    "static/js/2.0fbd3ae6.chunk.js",
+    "static/js/runtime-main.b6aa342e.js",
+    "static/js/2.90901de6.chunk.js",
     "static/css/main.c1b8bb07.chunk.css",
-    "static/js/main.439cb21d.chunk.js"
+    "static/js/main.5fa14784.chunk.js"
   ]
 }
